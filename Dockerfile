@@ -27,7 +27,7 @@ RUN printf "\\n[-] Building Meteor application...\\n" \
 ##############################################################################
 FROM node:14-slim
 
-LABEL maintainer="Reaction Commerce <engineering@reactioncommerce.com>"
+LABEL maintainer="BugsLife Solutions <engineering@bugslifesolutions.com>"
 
 # grab the dependencies and built app from the previous temporary builder image
 COPY --chown=node --from=builder /usr/local/src/build/bundle /usr/local/src/app

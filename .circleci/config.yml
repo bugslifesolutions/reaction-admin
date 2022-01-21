@@ -6,8 +6,6 @@ version: 2
 defaults: &defaults
   environment:
     CI_SCRIPTS: "npx --quiet --package @reactioncommerce/ci-scripts@1.6.2"
-    DOCKER_REPOSITORY: "reactioncommerce/admin"
-    DOCKER_NAMESPACE: "reactioncommerce"
     DOCKER_NAME: "admin"
   docker:
     - image: circleci/node:12.16.1-stretch
@@ -115,7 +113,7 @@ workflows:
           filters:
             branches:
               only:
-                - trunk
+                - trunk_v3
           requires:
             - dockerfile-lint
             - eslint
@@ -125,6 +123,6 @@ workflows:
           filters:
             branches:
               only:
-                - trunk
+                - trunk_v3
           requires:
             - release
