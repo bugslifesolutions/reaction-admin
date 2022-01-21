@@ -63,7 +63,7 @@ export async function ensureHydraClient() {
     headers: { "Content-Type": "application/json", ...mockTlsTermination }
   });
 
-  if (![200, 404].includes(getClientResponse.status)) {
+  if (![200, 401].includes(getClientResponse.status)) {
     Logger.error(await getClientResponse.text());
     throw new Error(`Could not get Hydra client [${getClientResponse.status}]`);
   }
