@@ -1,4 +1,4 @@
-FROM reactioncommerce/meteor:2.0.0-v1 as builder
+FROM reactioncommerce/meteor:2.5.1-v1 as builder
 
 ENV APP_SOURCE_DIR /usr/local/src/appsrc
 ENV APP_BUNDLE_DIR /usr/local/src/build
@@ -27,7 +27,7 @@ RUN printf "\\n[-] Building Meteor application...\\n" \
 ##############################################################################
 FROM node:14-slim
 
-LABEL maintainer="Reaction Commerce <engineering@reactioncommerce.com>"
+LABEL maintainer="Mailchimp Open Commerce <hello-open-commerce@mailchimp.com>"
 
 # grab the dependencies and built app from the previous temporary builder image
 COPY --chown=node --from=builder /usr/local/src/build/bundle /usr/local/src/app
