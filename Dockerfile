@@ -25,7 +25,8 @@ RUN printf "\\n[-] Building Meteor application...\\n" \
 ##############################################################################
 # final build stage - create the final production image
 ##############################################################################
-FROM node:14-slim
+FROM node:14.18.1-slim
+ENV NPM_VERSION 8.5.5
 
 LABEL maintainer="Mailchimp Open Commerce <hello-open-commerce@mailchimp.com>"
 
@@ -35,13 +36,11 @@ COPY --chown=node --from=builder /usr/local/src/build/bundle /usr/local/src/app
 # copy the waitForMongo script, too
 COPY --chown=node --from=builder /usr/local/src/appsrc/.reaction/waitForMongo.js /usr/local/src/app/programs/server/waitForMongo.js
 
-# Install the latest version of NPM (as of when this
-# base image is built)
-RUN npm i -g npm@latest
+RUN npm i -g npm@${NPM_VERSION}
 
 WORKDIR /usr/local/src/app/programs/server/
 
-RUN npm install --production --no-audit
+RUN npm install --omit-dev --no-audit
 
 # Also install mongodb pkg needed by the waitForMongo script
 RUN npm install -E --no-save mongodb@3.5.7

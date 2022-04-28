@@ -1,3 +1,10 @@
+# [4.0.0-beta.18](https://github.com/reactioncommerce/reaction-admin/compare/v4.0.0-beta.17...v4.0.0-beta.18) (2022-03-28)
+
+
+### Features
+
+* updated CircleCi config to add latest tag to docker image. ([d585a9c](https://github.com/reactioncommerce/reaction-admin/commit/d585a9c161d452de5fc79199390ee7e2c8c0fd2e))
+
 # [4.0.0-beta.17](https://github.com/reactioncommerce/reaction-admin/compare/v4.0.0-beta.16...v4.0.0-beta.17) (2022-02-14)
 
 
