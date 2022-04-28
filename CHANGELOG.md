@@ -1,3 +1,10 @@
+# [4.0.0-beta.20](https://github.com/reactioncommerce/reaction-admin/compare/v4.0.0-beta.19...v4.0.0-beta.20) (2022-04-28)
+
+
+### Bug Fixes
+
+* fix meteor version in Dockerfile ([28bc5e5](https://github.com/reactioncommerce/reaction-admin/commit/28bc5e578b769c6d794c9da7caae16dc4b9dca57))
+
 # [4.0.0-beta.19](https://github.com/reactioncommerce/reaction-admin/compare/v4.0.0-beta.18...v4.0.0-beta.19) (2022-04-28)
 
 
