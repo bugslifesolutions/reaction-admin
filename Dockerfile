@@ -1,4 +1,4 @@
-FROM reactioncommerce/meteor:2.5.1-v1 as builder
+FROM reactioncommerce/meteor:2.5.0-v1 as builder
 
 ENV APP_SOURCE_DIR /usr/local/src/appsrc
 ENV APP_BUNDLE_DIR /usr/local/src/build
