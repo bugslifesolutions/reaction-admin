@@ -1,3 +1,10 @@
+# [4.0.0-beta.19](https://github.com/reactioncommerce/reaction-admin/compare/v4.0.0-beta.18...v4.0.0-beta.19) (2022-04-28)
+
+
+### Features
+
+* upgrade to meteor 2.5/node 14.18.1 ([e3da164](https://github.com/reactioncommerce/reaction-admin/commit/e3da16481622e8091cf910636d36923a745cf486))
+
 # [4.0.0-beta.18](https://github.com/reactioncommerce/reaction-admin/compare/v4.0.0-beta.17...v4.0.0-beta.18) (2022-03-28)
 
 
