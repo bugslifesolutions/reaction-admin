@@ -3,6 +3,7 @@
   "description": "Admin interface to manage Mailchimp Open Commerce Stores",
   "version": "4.0.0-beta.20",
   "main": "main.js",
+  "reactionProjectType": "admin-meteor",
   "release": {
     "branches": [
       {
