@@ -235,5 +235,6 @@ const VariantDetailForm = React.forwardRef((props, ref) => {
     </Card>
   );
 });
+VariantDetailForm.displayName = "VariantDetailForm";
 
 export default VariantDetailForm;

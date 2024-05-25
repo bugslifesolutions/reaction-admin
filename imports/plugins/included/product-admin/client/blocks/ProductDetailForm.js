@@ -222,5 +222,6 @@ const ProductDetailForm = React.forwardRef((props, ref) => {
     </Card>
   );
 });
+ProductDetailForm.displayName = "ProductDetailForm";
 
 export default ProductDetailForm;

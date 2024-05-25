@@ -279,7 +279,15 @@ SortableNodeContentRenderer.propTypes = {
   isSearchMatch: PropTypes.bool,
   listIndex: PropTypes.number.isRequired,
   lowerSiblingCounts: PropTypes.arrayOf(PropTypes.number).isRequired,
-  node: PropTypes.shape({}).isRequired,
+  node: PropTypes.shape({
+    title: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    children: PropTypes.array,
+    expanded: PropTypes.bool,
+    isVisible: PropTypes.bool,
+    isPrivate: PropTypes.bool,
+    isSecondary: PropTypes.bool
+  }).isRequired,
   parentNode: PropTypes.shape({}), // Needed for dndManager
   path: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])).isRequired,
   rowDirection: PropTypes.string.isRequired,

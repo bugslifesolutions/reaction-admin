@@ -133,5 +133,6 @@ const ProductSocialForm = React.forwardRef((props, ref) => {
     </Card>
   );
 });
+ProductSocialForm.displayName = "ProductSocialForm";
 
 export default ProductSocialForm;

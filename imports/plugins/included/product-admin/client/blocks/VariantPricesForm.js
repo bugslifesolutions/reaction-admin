@@ -149,5 +149,6 @@ const VariantPricesForm = React.forwardRef((props, ref) => {
     </Card>
   );
 });
+VariantPricesForm.displayName = "VariantPricesForm";
 
 export default VariantPricesForm;

@@ -5,8 +5,7 @@ import {
   Button,
   DataTable,
   useDataTable
-}
-  from "@reactioncommerce/catalyst";
+} from "@reactioncommerce/catalyst";
 import { Box, Card, CardHeader, CardContent, makeStyles } from "@material-ui/core";
 import { useApolloClient } from "@apollo/react-hooks";
 import useCurrentShopId from "/imports/client/ui/hooks/useCurrentShopId";
