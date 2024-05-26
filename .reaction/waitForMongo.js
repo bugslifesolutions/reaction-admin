@@ -97,6 +97,16 @@ async function connect(mongoUrl) {
 }
 
 /**
+ * Check mongodb server status 
+ */
+async function checkServerStatus(db) {
+  const status = await db.command({ serverStatus: 1 });
+  if (status.ok !== 1) {
+    throw new Error("Server status not 'ok'", status);
+  }
+}
+
+/**
  * Check if replication is ready
  *
  * @param {Object} db connected mongo db instance
@@ -114,24 +124,33 @@ async function checkReplicaSetStatus(db) {
  * @returns {Promise} indication of success/failure
  */
 async function main() {
-  const { MONGO_URL } = process.env;
+  const { MONGO_URL, MONGO_WAIT_FOR_RS } = process.env;
   if (!MONGO_URL) {
     throw new Error("You must set MONGO_URL environment variable.");
   }
 
-  defaultOut("Waiting for MongoDB...\n");
+  defaultOut("Waiting for MongoDB connection...\n");
   const client = await checkWaitRetry({
     timeoutMessage: "ERROR: MongoDB not reachable in time.",
     check: connect.bind(null, MONGO_URL)
   });
-  defaultOut("MongoDB ready.\n");
+  defaultOut("MongoDB connection established.\n");
 
-  defaultOut("Waiting for MongoDB replica set...\n");
+  defaultOut("Waiting for MongoDB serverStatus to be 'ok'...\n");
   await checkWaitRetry({
-    timeoutMessage: "ERROR: MongoDB replica set not ready in time.",
-    check: checkReplicaSetStatus.bind(null, client.db())
+    timeoutMessage: "ERROR: MongoDB serverStatus not 'ok' in time.",
+    check: checkServerStatus.bind(null, client.db())
   });
-  defaultOut("MongoDB replica set ready.\n");
+  defaultOut("MongoDB serverStatus is 'ok'.\n");
+
+  if (MONGO_WAIT_FOR_RS) {
+    defaultOut("Waiting for MongoDB replica set...\n");
+    await checkWaitRetry({
+      timeoutMessage: "ERROR: MongoDB replica set not ready in time.",
+      check: checkReplicaSetStatus.bind(null, client.db())
+    });
+    defaultOut("MongoDB replica set ready.\n");
+  }
 
   await client.close();
   process.exit();
