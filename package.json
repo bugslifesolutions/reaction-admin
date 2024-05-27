@@ -54,17 +54,17 @@
   "directories": {
     "test": "tests"
   },
-  "homepage": "https://github.com/reactioncommerce/reaction-admin",
-  "url": "https://github.com/reactioncommerce/reaction-admin",
-  "email": "reaction@reactioncommerce.com",
+  "homepage": "https://github.com/bugslifesolutions/reaction-admin",
+  "url": "https://github.com/bugslifesolutions/reaction-admin",
+  "email": "reaction@bugslifesolutions.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactioncommerce/reaction-admin.git"
+    "url": "https://github.com/bugslifesolutions/reaction-admin.git"
   },
-  "author": "Reaction Commerce <hello@reactioncommerce.com>",
+  "author": "Reaction Commerce <hello@bugslifesolutions.com>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/reactioncommerce/reaction-admin/issues"
+    "url": "https://github.com/bugslifesolutions/reaction-admin/issues"
   },
   "dependencies": {
     "@accounts/apollo-link": "^0.32.1",
