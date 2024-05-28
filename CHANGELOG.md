@@ -1,3 +1,26 @@
+# [4.0.0-beta.16](https://github.com/bugslifesolutions/reaction-admin/compare/v4.0.0-beta.15...v4.0.0-beta.16) (2024-05-28)
+
+
+### Bug Fixes
+
+* bl docker publish target ([a6acab8](https://github.com/bugslifesolutions/reaction-admin/commit/a6acab8a7fa116dc820efd3ce38c98843f2224d5))
+* circleci config build stanza typo ([c9984fe](https://github.com/bugslifesolutions/reaction-admin/commit/c9984fee01ba886fb71aa8f232aa3c5bd5de6069))
+* fix meteor version in Dockerfile ([28bc5e5](https://github.com/bugslifesolutions/reaction-admin/commit/28bc5e578b769c6d794c9da7caae16dc4b9dca57))
+* lint errors ([80653f5](https://github.com/bugslifesolutions/reaction-admin/commit/80653f57dc94141269f6ace363f89d72e22ef181))
+* package.json & package-lock.json to reduce vulnerabilities ([1382200](https://github.com/bugslifesolutions/reaction-admin/commit/1382200bcb4e38964217f0f05c56fed68089bbce))
+* upgrade @accounts/apollo-link from 0.31.1 to 0.32.1 ([4a7a5fe](https://github.com/bugslifesolutions/reaction-admin/commit/4a7a5feac86136b2a089edd3cdf22e143fe33078))
+* upgrade @wojtekmaj/enzyme-adapter-react-17 from 0.6.3 to 0.6.5 ([7f06eea](https://github.com/bugslifesolutions/reaction-admin/commit/7f06eea6962c1fefd2d4e7b41d06359c61ed5333))
+* upgrade i18next-fetch-backend from 2.2.0 to 2.3.1 ([3a14a8f](https://github.com/bugslifesolutions/reaction-admin/commit/3a14a8f7e489cf1cf4e81b2ddc7f601d62b10e8f))
+* upgrade libphonenumber-js from 1.9.34 to 1.9.41 ([5035244](https://github.com/bugslifesolutions/reaction-admin/commit/5035244bf18195ba016d9817e2fcc1f1a6d3f7c2))
+* upgrade mongodb from 3.7.1 to 3.7.3 ([0b72207](https://github.com/bugslifesolutions/reaction-admin/commit/0b72207b0e4e1f74582865825dd26f3b3392b8da))
+
+
+### Features
+
+* support sharded cluster and optional replica set waiting ([67e9e85](https://github.com/bugslifesolutions/reaction-admin/commit/67e9e85ecfa88fb450b6f6551129914a59a92d77))
+* updated CircleCi config to add latest tag to docker image. ([d585a9c](https://github.com/bugslifesolutions/reaction-admin/commit/d585a9c161d452de5fc79199390ee7e2c8c0fd2e))
+* upgrade to meteor 2.5/node 14.18.1 ([e3da164](https://github.com/bugslifesolutions/reaction-admin/commit/e3da16481622e8091cf910636d36923a745cf486))
+
 # [4.0.0-beta.20](https://github.com/reactioncommerce/reaction-admin/compare/v4.0.0-beta.19...v4.0.0-beta.20) (2022-04-28)
 
 
