@@ -4,6 +4,9 @@
   "version": "4.0.0-beta.20",
   "main": "main.js",
   "projectType": "admin-meteor",
+  "engines": {
+    "node": ">=v14"
+  },
   "release": {
     "branches": [
       {

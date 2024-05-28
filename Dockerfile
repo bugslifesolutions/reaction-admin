@@ -7,9 +7,9 @@ ENV TOOL_NODE_FLAGS --max-old-space-size=4096
 USER root
 
 RUN mkdir -p "$APP_SOURCE_DIR" \
- && mkdir -p "$APP_BUNDLE_DIR" \
- && chown -R node "$APP_SOURCE_DIR" \
- && chown -R node "$APP_BUNDLE_DIR"
+    && mkdir -p "$APP_BUNDLE_DIR" \
+    && chown -R node "$APP_SOURCE_DIR" \
+    && chown -R node "$APP_BUNDLE_DIR"
 
 COPY --chown=node . $APP_SOURCE_DIR
 
@@ -20,15 +20,15 @@ USER node
 RUN npm install --no-audit
 RUN node --experimental-modules ./.reaction/scripts/build.mjs
 RUN printf "\\n[-] Building Meteor application...\\n" \
- && /home/node/.meteor/meteor build --server-only --architecture os.linux.x86_64 --directory "$APP_BUNDLE_DIR"
+    && /home/node/.meteor/meteor build --server-only --architecture os.linux.x86_64 --directory "$APP_BUNDLE_DIR"
 
 ##############################################################################
 # final build stage - create the final production image
 ##############################################################################
-FROM node:14.18.1-slim
-ENV NPM_VERSION 8.5.5
+FROM node:14.21.3-slim
+ENV NPM_VERSION 6.14.18
 
-LABEL maintainer="Mailchimp Open Commerce <hello-open-commerce@mailchimp.com>"
+LABEL maintainer="BugsLife Solutions <hello-open-commerce@bugslifesolutions.com>"
 
 # grab the dependencies and built app from the previous temporary builder image
 COPY --chown=node --from=builder /usr/local/src/build/bundle /usr/local/src/app
@@ -43,7 +43,7 @@ WORKDIR /usr/local/src/app/programs/server/
 RUN npm install --omit-dev --no-audit
 
 # Also install mongodb pkg needed by the waitForMongo script
-RUN npm install -E --no-save mongodb@3.5.7
+RUN npm install -E --no-save mongodb@4.1.2
 
 WORKDIR /usr/local/src/app
 
