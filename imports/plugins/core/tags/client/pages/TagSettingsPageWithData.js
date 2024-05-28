@@ -163,6 +163,7 @@ class TagSettings extends Component {
       const columnMeta = {
         accessor: field,
         Header: headerLabel,
+        // eslint-disable-next-line react/no-multi-comp
         Cell: (row) => (
           <Components.TagDataTableColumn row={row} />
         ),

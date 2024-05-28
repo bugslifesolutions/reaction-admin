@@ -34,7 +34,16 @@ Blocks.defaultProps = {
 };
 
 Blocks.propTypes = {
-  children: PropTypes.func.isRequired
+  blockProps: {
+    component: PropTypes.elementType.isRequired,
+    hocs: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.func),
+      PropTypes.func
+    ]),
+    priority: PropTypes.number
+  },
+  children: PropTypes.func.isRequired,
+  region: PropTypes.string.isRequired
 };
 
 

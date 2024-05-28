@@ -200,6 +200,7 @@ class TextField extends Component {
   renderLabel() {
     if (this.props.label || this.props.i18nKeyLabel) {
       return (
+        // eslint-disable-next-line jsx-a11y/label-has-associated-control
         <label htmlFor={this.props.id}>
           <Components.Translation defaultValue={this.props.label} i18nKey={this.props.i18nKeyLabel} />
         </label>
