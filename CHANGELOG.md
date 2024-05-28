@@ -1,3 +1,10 @@
+# [4.0.0-beta.17](https://github.com/bugslifesolutions/reaction-admin/compare/v4.0.0-beta.16...v4.0.0-beta.17) (2024-05-28)
+
+
+### Bug Fixes
+
+* cache folder contains root-owned files ([1fc2ee8](https://github.com/bugslifesolutions/reaction-admin/commit/1fc2ee84d95acde6cd805cbdaffad0c579e83cb8))
+
 # [4.0.0-beta.16](https://github.com/bugslifesolutions/reaction-admin/compare/v4.0.0-beta.15...v4.0.0-beta.16) (2024-05-28)
 
 
