@@ -1,3 +1,11 @@
+# [4.0.0-beta.18](https://github.com/bugslifesolutions/reaction-admin/compare/v4.0.0-beta.17...v4.0.0-beta.18) (2024-06-03)
+
+
+### Bug Fixes
+
+* build errors ([c434752](https://github.com/bugslifesolutions/reaction-admin/commit/c434752cd2f4ee1a69728427013f551ee212228a))
+* material-ui renaming createMuiTheme in minor release ([3c4bcab](https://github.com/bugslifesolutions/reaction-admin/commit/3c4bcab4f489f762731bb1013c273ae7acc7c018))
+
 # [4.0.0-beta.17](https://github.com/bugslifesolutions/reaction-admin/compare/v4.0.0-beta.16...v4.0.0-beta.17) (2024-05-28)
 
 
