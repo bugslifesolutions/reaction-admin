@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Checkbox from "@material-ui/core/Checkbox";
-import CheckboxCheckedIcon from "mdi-material-ui/CheckBoxOutline";
+import CheckboxCheckedIcon from "mdi-material-ui/CheckboxOutline";
 
 /**
  * @name TagTableSelect

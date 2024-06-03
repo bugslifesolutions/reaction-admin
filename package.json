@@ -266,12 +266,6 @@
   "babel": {
     "plugins": [
       [
-        "@babel/plugin-proposal-class-properties",
-        {
-          "loose": false
-        }
-      ],
-      [
         "lodash",
         {
           "id": [
@@ -356,8 +350,7 @@
   },
   "browserslist": [
     "last 2 versions",
-    "> 1%",
-    "IE 11"
+    "> 1%"
   ],
   "eslintConfig": {
     "extends": "@reactioncommerce",
