@@ -1,3 +1,10 @@
+# [4.0.0-beta.19](https://github.com/bugslifesolutions/reaction-admin/compare/v4.0.0-beta.18...v4.0.0-beta.19) (2024-06-12)
+
+
+### Bug Fixes
+
+* an [@import](https://github.com/import) rule was ignored because it wasn't defined at the top of the stylesheet ([d897a41](https://github.com/bugslifesolutions/reaction-admin/commit/d897a4131217dc390bf2218ff50f8836cde0b913))
+
 # [4.0.0-beta.18](https://github.com/bugslifesolutions/reaction-admin/compare/v4.0.0-beta.17...v4.0.0-beta.18) (2024-06-03)
 
 
